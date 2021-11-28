@@ -1,6 +1,7 @@
 import original from "date-fns/setWeek"
 
 import {dateToString, stringToDate} from "./_lib/transform"
+import type {Day, Locale} from "./_lib/types"
 
 export interface Options {
   locale?: Locale
