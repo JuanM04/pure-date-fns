@@ -1,6 +1,11 @@
 {
   "name": "pure-date-fns",
   "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "packageManager": "yarn@3.1.1",
   "volta": {
     "node": "16.13.0",
@@ -13,7 +18,8 @@
   },
   "scripts": {
     "test": "echo \"No tests yet\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublish": "tsc"
   },
   "dependencies": {
     "date-fns": "^2.26.0"

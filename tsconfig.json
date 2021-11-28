@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/lib/*": ["./src/_lib/*"]
-    }
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist"]
 }

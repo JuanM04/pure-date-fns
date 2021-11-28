@@ -1,7 +1,7 @@
 import ogAreIntervalsOverlapping from "date-fns/areIntervalsOverlapping"
 
-import {intervalToDateInterval} from "@/lib/transform"
-import type {Interval} from "@/lib/types"
+import {intervalToDateInterval} from "./_lib/transform"
+import type {Interval} from "./_lib/types"
 
 export default function areIntervalsOverlapping(
   intervalLeft: Interval,
