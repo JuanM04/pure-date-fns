@@ -1,6 +1,6 @@
-const dateRegex = /^\d{4}-\d{2}-\d{2}$/
-import type {Interval as OgInterval} from "date-fns"
+import type {Interval as OriginalInterval} from "date-fns"
 
+import isDate from "../isDate"
 import type {Interval} from "./types"
 
 function zeros(n: number, len: number) {
@@ -17,12 +17,8 @@ function zeros(n: number, len: number) {
 }
 
 export function stringToDate(str: string): Date {
-  if (typeof str !== "string") {
-    throw new TypeError("The date has to be of type 'string'")
-  }
-
-  if (!str.match(dateRegex)) {
-    throw new Error("The date has to be of type 'YYYY-MM-DD'")
+  if (!isDate(str)) {
+    throw new TypeError("Invalid date format")
   }
 
   return new Date(`${str}T00:00:00`)
@@ -40,7 +36,7 @@ export function dateToString(date: Date): string {
   return [zeros(year, 4), zeros(month, 2), zeros(day, 2)].join("-")
 }
 
-export const intervalToDateInterval = (interval: Interval): OgInterval => ({
+export const intervalToDateInterval = (interval: Interval): OriginalInterval => ({
   start: stringToDate(interval.start),
   end: stringToDate(interval.end),
 })
