@@ -1,7 +1,7 @@
-import ogCompareAsc from "date-fns/compareAsc"
+import original from "date-fns/compareAsc"
 
 import {stringToDate} from "./_lib/transform"
 
 export default function compareAsc(dateLeft: string, dateRight: string): number {
-  return ogCompareAsc(stringToDate(dateLeft), stringToDate(dateRight))
+  return original(stringToDate(dateLeft), stringToDate(dateRight))
 }
