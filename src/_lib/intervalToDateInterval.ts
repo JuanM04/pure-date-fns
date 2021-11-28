@@ -1,7 +1,7 @@
 import type {Interval as OriginalInterval} from "date-fns"
 
-import type {Interval} from "./_types"
-import toJSDate from "./toJSDate"
+import toJSDate from "../toJSDate"
+import type {Interval} from "./types"
 
 export const intervalToDateInterval = (interval: Interval): OriginalInterval => ({
   start: toJSDate(interval.start),
