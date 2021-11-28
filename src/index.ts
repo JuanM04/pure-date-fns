@@ -1,3 +1,4 @@
+export * from "./_lib/types"
 export {default as add} from "./add"
 export {default as addBusinessDays} from "./addBusinessDays"
 export {default as addDays} from "./addDays"
