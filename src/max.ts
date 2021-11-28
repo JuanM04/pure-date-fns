@@ -1,7 +1,8 @@
 import original from "date-fns/max"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function max(datesArray: string[]): string {
-  return dateToString(original(datesArray.map(stringToDate)))
+  return fromJSDate(original(datesArray.map(toJSDate)))
 }

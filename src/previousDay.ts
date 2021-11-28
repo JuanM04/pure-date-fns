@@ -1,8 +1,9 @@
 import original from "date-fns/previousDay"
 
-import {dateToString, stringToDate} from "./_lib/transform"
-import type {Day} from "./_lib/types"
+import type {Day} from "./_types"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function previousDay(date: string, day: Day): string {
-  return dateToString(original(stringToDate(date), day))
+  return fromJSDate(original(toJSDate(date), day))
 }

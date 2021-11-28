@@ -1,7 +1,7 @@
 import original from "date-fns/isLeapYear"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function isLeapYear(date: string): boolean {
-  return original(stringToDate(date))
+  return original(toJSDate(date))
 }

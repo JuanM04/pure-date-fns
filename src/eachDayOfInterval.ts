@@ -1,12 +1,13 @@
 import original from "date-fns/eachDayOfInterval"
 
-import {dateToString, intervalToDateInterval} from "./_lib/transform"
-import type {Interval} from "./_lib/types"
+import type {Interval} from "./_types"
+import {intervalToDateInterval} from "./_utils"
+import fromJSDate from "./fromJSDate"
 
 export interface Options {
   step?: number
 }
 
 export default function eachDayOfInterval(interval: Interval, options?: Options): string[] {
-  return original(intervalToDateInterval(interval), options).map(dateToString)
+  return original(intervalToDateInterval(interval), options).map(fromJSDate)
 }

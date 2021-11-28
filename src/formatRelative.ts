@@ -1,7 +1,7 @@
 import original from "date-fns/formatRelative"
 
-import {stringToDate} from "./_lib/transform"
-import type {Day, Locale} from "./_lib/types"
+import type {Day, Locale} from "./_types"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -9,5 +9,5 @@ export interface Options {
 }
 
 export default function formatRelative(date: string, baseDate: string, options?: Options): string {
-  return original(stringToDate(date), stringToDate(baseDate), options)
+  return original(toJSDate(date), toJSDate(baseDate), options)
 }

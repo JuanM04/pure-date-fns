@@ -1,7 +1,7 @@
 import original from "date-fns/isSameISOWeek"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function isSameISOWeek(dateLeft: string, dateRight: string): boolean {
-  return original(stringToDate(dateLeft), stringToDate(dateRight))
+  return original(toJSDate(dateLeft), toJSDate(dateRight))
 }

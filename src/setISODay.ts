@@ -1,7 +1,8 @@
 import original from "date-fns/setISODay"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function setISODay(date: string, day: number): string {
-  return dateToString(original(stringToDate(date), day))
+  return fromJSDate(original(toJSDate(date), day))
 }

@@ -1,7 +1,7 @@
 import original from "date-fns/isAfter"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function isAfter(date: string, dateToCompare: string): boolean {
-  return original(stringToDate(date), stringToDate(dateToCompare))
+  return original(toJSDate(date), toJSDate(dateToCompare))
 }

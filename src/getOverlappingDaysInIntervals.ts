@@ -1,7 +1,7 @@
 import original from "date-fns/getOverlappingDaysInIntervals"
 
-import {intervalToDateInterval} from "./_lib/transform"
-import type {Interval} from "./_lib/types"
+import type {Interval} from "./_types"
+import {intervalToDateInterval} from "./_utils"
 
 export default function getOverlappingDaysInIntervals(
   intervalLeft: Interval,

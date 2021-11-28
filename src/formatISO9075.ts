@@ -1,6 +1,6 @@
 import original from "date-fns/formatISO9075"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   format?: "extended" | "basic"
@@ -8,5 +8,5 @@ export interface Options {
 }
 
 export default function formatISO9075(date: string, options?: Options): string {
-  return original(stringToDate(date), options)
+  return original(toJSDate(date), options)
 }

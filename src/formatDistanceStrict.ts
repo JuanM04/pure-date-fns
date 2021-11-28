@@ -1,7 +1,7 @@
 import original from "date-fns/formatDistanceStrict"
 
-import {stringToDate} from "./_lib/transform"
-import type {Locale} from "./_lib/types"
+import type {Locale} from "./_types"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -15,5 +15,5 @@ export default function formatDistanceStrict(
   baseDate: string,
   options?: Options
 ): string {
-  return original(stringToDate(date), stringToDate(baseDate), options)
+  return original(toJSDate(date), toJSDate(baseDate), options)
 }

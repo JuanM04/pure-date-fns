@@ -1,7 +1,8 @@
 import original from "date-fns/setDayOfYear"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function setDayOfYear(date: string, dayOfYear: number): string {
-  return dateToString(original(stringToDate(date), dayOfYear))
+  return fromJSDate(original(toJSDate(date), dayOfYear))
 }

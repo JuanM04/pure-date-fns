@@ -1,8 +1,9 @@
 import original from "date-fns/eachQuarterOfInterval"
 
-import {dateToString, intervalToDateInterval} from "./_lib/transform"
-import type {Interval} from "./_lib/types"
+import type {Interval} from "./_types"
+import {intervalToDateInterval} from "./_utils"
+import fromJSDate from "./fromJSDate"
 
 export default function eachQuarterOfInterval(interval: Interval): string[] {
-  return original(intervalToDateInterval(interval)).map(dateToString)
+  return original(intervalToDateInterval(interval)).map(fromJSDate)
 }

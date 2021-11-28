@@ -1,7 +1,8 @@
 import original from "date-fns/startOfMonth"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function startOfMonth(date: string): string {
-  return dateToString(original(stringToDate(date)))
+  return fromJSDate(original(toJSDate(date)))
 }

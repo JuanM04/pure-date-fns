@@ -1,7 +1,7 @@
 import original from "date-fns/lightFormat"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function lightFormat(date: string, format: string): string {
-  return original(stringToDate(date), format)
+  return original(toJSDate(date), format)
 }

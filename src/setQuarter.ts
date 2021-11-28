@@ -1,7 +1,8 @@
 import original from "date-fns/setQuarter"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function setQuarter(date: string, quarter: number): string {
-  return dateToString(original(stringToDate(date), quarter))
+  return fromJSDate(original(toJSDate(date), quarter))
 }

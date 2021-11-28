@@ -1,7 +1,7 @@
 import original from "date-fns/getISOWeek"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function getISOWeek(date: string): number {
-  return original(stringToDate(date))
+  return original(toJSDate(date))
 }

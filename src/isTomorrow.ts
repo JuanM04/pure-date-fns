@@ -1,7 +1,7 @@
 import original from "date-fns/isTomorrow"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function isTomorrow(date: string): boolean {
-  return original(stringToDate(date))
+  return original(toJSDate(date))
 }

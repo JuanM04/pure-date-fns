@@ -1,7 +1,7 @@
 import original from "date-fns/isThisMonth"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function isThisMonth(date: string): boolean {
-  return original(stringToDate(date))
+  return original(toJSDate(date))
 }

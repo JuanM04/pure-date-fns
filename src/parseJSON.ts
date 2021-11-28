@@ -1,7 +1,7 @@
 import original from "date-fns/parseJSON"
 
-import {dateToString} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
 
 export default function parseJSON(argument: string): string {
-  return dateToString(original(argument))
+  return fromJSDate(original(argument))
 }

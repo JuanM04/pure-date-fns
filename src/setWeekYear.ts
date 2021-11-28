@@ -1,7 +1,8 @@
 import original from "date-fns/setWeekYear"
 
-import {dateToString, stringToDate} from "./_lib/transform"
-import type {Day, Locale} from "./_lib/types"
+import type {Day, Locale} from "./_types"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -10,5 +11,5 @@ export interface Options {
 }
 
 export default function setWeekYear(date: string, weekYear: number, options?: Options): string {
-  return dateToString(original(stringToDate(date), weekYear, options))
+  return fromJSDate(original(toJSDate(date), weekYear, options))
 }

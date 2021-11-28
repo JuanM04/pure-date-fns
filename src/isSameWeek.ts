@@ -1,7 +1,7 @@
 import original from "date-fns/isSameWeek"
 
-import {stringToDate} from "./_lib/transform"
-import type {Day, Locale} from "./_lib/types"
+import type {Day, Locale} from "./_types"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -13,5 +13,5 @@ export default function isSameWeek(
   dateRight: string,
   options?: Options
 ): boolean {
-  return original(stringToDate(dateLeft), stringToDate(dateRight), options)
+  return original(toJSDate(dateLeft), toJSDate(dateRight), options)
 }

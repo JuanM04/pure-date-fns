@@ -1,7 +1,8 @@
 import original from "date-fns/parse"
 
-import {dateToString, stringToDate} from "./_lib/transform"
-import type {Day, Locale} from "./_lib/types"
+import type {Day, Locale} from "./_types"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -17,5 +18,5 @@ export default function parse(
   referenceDate: string,
   options?: Options
 ): string {
-  return dateToString(original(dateString, formatString, stringToDate(referenceDate), options))
+  return fromJSDate(original(dateString, formatString, toJSDate(referenceDate), options))
 }

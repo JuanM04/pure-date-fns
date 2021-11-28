@@ -1,7 +1,8 @@
 import original from "date-fns/eachWeekendOfMonth"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function eachWeekendOfMonth(date: string): string[] {
-  return original(stringToDate(date)).map(dateToString)
+  return original(toJSDate(date)).map(fromJSDate)
 }

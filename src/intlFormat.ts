@@ -1,6 +1,6 @@
 import original from "date-fns/intlFormat"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export type Locale = Intl.ResolvedDateTimeFormatOptions["locale"]
 export type FormatOptions = Intl.DateTimeFormatOptions
@@ -22,7 +22,7 @@ function intlFormat(
   localeOptions?: LocaleOptions
 ): string {
   // @ts-expect-error formatOrLocale expects wrong type, idk why
-  return original(stringToDate(date), formatOrLocale, localeOptions)
+  return original(toJSDate(date), formatOrLocale, localeOptions)
 }
 
 export default intlFormat

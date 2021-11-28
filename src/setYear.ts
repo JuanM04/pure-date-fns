@@ -1,7 +1,8 @@
 import original from "date-fns/setYear"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function setYear(date: string, year: number): string {
-  return dateToString(original(stringToDate(date), year))
+  return fromJSDate(original(toJSDate(date), year))
 }

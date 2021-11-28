@@ -1,7 +1,8 @@
 import original from "date-fns/startOfWeek"
 
-import {dateToString, stringToDate} from "./_lib/transform"
-import type {Day, Locale} from "./_lib/types"
+import type {Day, Locale} from "./_types"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -9,5 +10,5 @@ export interface Options {
 }
 
 export default function startOfWeek(date: string, options?: Options): string {
-  return dateToString(original(stringToDate(date), options))
+  return fromJSDate(original(toJSDate(date), options))
 }

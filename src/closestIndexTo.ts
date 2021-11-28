@@ -1,10 +1,10 @@
 import original from "date-fns/closestIndexTo"
 
-import {stringToDate} from "./_lib/transform"
+import toJSDate from "./toJSDate"
 
 export default function closestIndexTo(
   dateToCompare: string,
   datesArray: string[]
 ): number | undefined {
-  return original(stringToDate(dateToCompare), datesArray.map(stringToDate))
+  return original(toJSDate(dateToCompare), datesArray.map(toJSDate))
 }

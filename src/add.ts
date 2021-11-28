@@ -1,8 +1,9 @@
 import original from "date-fns/add"
 
-import {dateToString, stringToDate} from "./_lib/transform"
-import type {Duration} from "./_lib/types"
+import type {Duration} from "./_types"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function add(date: string, duration: Duration): string {
-  return dateToString(original(stringToDate(date), duration))
+  return fromJSDate(original(toJSDate(date), duration))
 }

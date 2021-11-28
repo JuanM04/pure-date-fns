@@ -1,7 +1,7 @@
 import original from "date-fns/format"
 
-import {stringToDate} from "./_lib/transform"
-import type {Day, Locale} from "./_lib/types"
+import type {Day, Locale} from "./_types"
+import toJSDate from "./toJSDate"
 
 export interface Options {
   locale?: Locale
@@ -12,5 +12,5 @@ export interface Options {
 }
 
 export default function format(date: string, format: string, options?: Options): string {
-  return original(stringToDate(date), format, options)
+  return original(toJSDate(date), format, options)
 }

@@ -1,7 +1,8 @@
 import original from "date-fns/addISOWeekYears"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export default function addISOWeekYears(date: string, amount: number): string {
-  return dateToString(original(stringToDate(date), amount))
+  return fromJSDate(original(toJSDate(date), amount))
 }

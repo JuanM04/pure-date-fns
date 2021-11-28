@@ -1,6 +1,7 @@
 import original from "date-fns/set"
 
-import {dateToString, stringToDate} from "./_lib/transform"
+import fromJSDate from "./fromJSDate"
+import toJSDate from "./toJSDate"
 
 export interface Values {
   year?: number
@@ -9,5 +10,5 @@ export interface Values {
 }
 
 export default function set(date: string, values: Values): string {
-  return dateToString(original(stringToDate(date), values))
+  return fromJSDate(original(toJSDate(date), values))
 }
