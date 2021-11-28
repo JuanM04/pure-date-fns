@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn tsc --noEmit
+yarn eslint --ignore-path .gitignore --ext .js,.ts .
+yarn test

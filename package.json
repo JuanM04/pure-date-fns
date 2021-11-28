@@ -1,0 +1,36 @@
+{
+  "name": "pure-date-fns",
+  "version": "0.1.0",
+  "packageManager": "yarn@3.1.1",
+  "volta": {
+    "node": "16.13.0",
+    "yarn": "1.22.17"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "^16.11.10",
+    "@types/prettier": "^2",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0",
+    "pretty-quick": "^3.1.2",
+    "typescript": "^4.5.2"
+  },
+  "license": "MIT"
+}
