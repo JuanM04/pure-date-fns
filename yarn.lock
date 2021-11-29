@@ -811,7 +811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:^7, @types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14":
+"@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14, @types/babel__core@npm:^7.1.16":
   version: 7.1.16
   resolution: "@types/babel__core@npm:7.1.16"
   dependencies:
@@ -852,7 +852,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^8":
+"@types/eslint@npm:^8.2.0":
   version: 8.2.0
   resolution: "@types/eslint@npm:8.2.0"
   dependencies:
@@ -941,7 +941,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2, @types/prettier@npm:^2.1.5":
+"@types/prettier@npm:^2.1.5, @types/prettier@npm:^2.4.2":
   version: 2.4.2
   resolution: "@types/prettier@npm:2.4.2"
   checksum: 76e230b2d11028af11fe12e09b2d5b10b03738e9abf819ae6ebb0f78cac13d39f860755ce05ac3855b608222518d956628f5d00322dc206cc6d1f2d8d1519f1e
@@ -4866,11 +4866,11 @@ __metadata:
     "@babel/core": ^7.16.0
     "@babel/plugin-transform-modules-commonjs": ^7.16.0
     "@babel/preset-typescript": ^7.16.0
-    "@types/babel__core": ^7
-    "@types/eslint": ^8
+    "@types/babel__core": ^7.1.16
+    "@types/eslint": ^8.2.0
     "@types/jest": ^27.0.3
     "@types/node": ^16.11.10
-    "@types/prettier": ^2
+    "@types/prettier": ^2.4.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     babel-plugin-add-import-extension: ^1.6.0
