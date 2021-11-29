@@ -1,6 +1,6 @@
 import original from "date-fns/differenceInCalendarISOWeekYears"
 
-import toJSDate from "./toJSDate"
+import toJSDate from "../toJSDate"
 
 export default function differenceInCalendarISOWeekYears(
   dateLeft: string,

@@ -1,7 +1,7 @@
 import original from "date-fns/areIntervalsOverlapping"
 
-import type {Interval} from "./_types"
-import {intervalToDateInterval} from "./_utils"
+import {intervalToDateInterval} from "../_lib/intervalToDateInterval"
+import type {Interval} from "../_lib/types"
 
 export interface Options {
   inclusive?: boolean | undefined

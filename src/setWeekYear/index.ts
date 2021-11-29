@@ -1,8 +1,8 @@
 import original from "date-fns/setWeekYear"
 
-import type {Day, Locale} from "./_types"
-import fromJSDate from "./fromJSDate"
-import toJSDate from "./toJSDate"
+import type {Day, Locale} from "../_lib/types"
+import fromJSDate from "../fromJSDate"
+import toJSDate from "../toJSDate"
 
 export interface Options {
   locale?: Locale

@@ -1,7 +1,7 @@
 import original from "date-fns/isThisWeek"
 
-import type {Day, Locale} from "./_types"
-import toJSDate from "./toJSDate"
+import type {Day, Locale} from "../_lib/types"
+import toJSDate from "../toJSDate"
 
 export interface Options {
   locale?: Locale

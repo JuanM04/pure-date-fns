@@ -1,7 +1,7 @@
 import original from "date-fns/intervalToDuration"
 
-import type {Duration, Interval} from "./_types"
-import {intervalToDateInterval} from "./_utils"
+import {intervalToDateInterval} from "../_lib/intervalToDateInterval"
+import type {Duration, Interval} from "../_lib/types"
 
 export default function intervalToDuration(interval: Interval): Duration {
   const result = original(intervalToDateInterval(interval))

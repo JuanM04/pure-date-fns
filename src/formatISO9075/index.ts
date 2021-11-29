@@ -1,6 +1,6 @@
 import original from "date-fns/formatISO9075"
 
-import toJSDate from "./toJSDate"
+import toJSDate from "../toJSDate"
 
 export interface Options {
   format?: "extended" | "basic"

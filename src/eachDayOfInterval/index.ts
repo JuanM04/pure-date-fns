@@ -1,8 +1,8 @@
 import original from "date-fns/eachDayOfInterval"
 
-import type {Interval} from "./_types"
-import {intervalToDateInterval} from "./_utils"
-import fromJSDate from "./fromJSDate"
+import {intervalToDateInterval} from "../_lib/intervalToDateInterval"
+import type {Interval} from "../_lib/types"
+import fromJSDate from "../fromJSDate"
 
 export interface Options {
   step?: number

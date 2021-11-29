@@ -1,6 +1,6 @@
 import original from "date-fns/intlFormat"
 
-import toJSDate from "./toJSDate"
+import toJSDate from "../toJSDate"
 
 export type Locale = Intl.ResolvedDateTimeFormatOptions["locale"]
 export type FormatOptions = Intl.DateTimeFormatOptions

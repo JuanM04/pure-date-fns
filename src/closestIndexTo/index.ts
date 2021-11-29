@@ -1,6 +1,6 @@
 import original from "date-fns/closestIndexTo"
 
-import toJSDate from "./toJSDate"
+import toJSDate from "../toJSDate"
 
 export default function closestIndexTo(
   dateToCompare: string,

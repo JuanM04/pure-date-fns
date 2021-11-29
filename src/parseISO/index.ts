@@ -1,6 +1,6 @@
 import original from "date-fns/parseISO"
 
-import fromJSDate from "./fromJSDate"
+import fromJSDate from "../fromJSDate"
 
 export interface Options {
   additionalDigits?: 0 | 1 | 2

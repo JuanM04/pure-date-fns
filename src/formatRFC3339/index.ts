@@ -1,6 +1,6 @@
 import original from "date-fns/formatRFC3339"
 
-import toJSDate from "./toJSDate"
+import toJSDate from "../toJSDate"
 
 export interface Options {
   fractionDigits?: 0 | 1 | 2 | 3

@@ -1,6 +1,6 @@
 import original from "date-fns/formatDuration"
 
-import type {Duration, Locale} from "./_types"
+import type {Duration, Locale} from "../_lib/types"
 
 export interface Options {
   locale?: Locale

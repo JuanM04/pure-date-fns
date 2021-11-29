@@ -1,8 +1,8 @@
 import original from "date-fns/eachWeekOfInterval"
 
-import type {Day, Interval, Locale} from "./_types"
-import {intervalToDateInterval} from "./_utils"
-import fromJSDate from "./fromJSDate"
+import {intervalToDateInterval} from "../_lib/intervalToDateInterval"
+import type {Day, Interval, Locale} from "../_lib/types"
+import fromJSDate from "../fromJSDate"
 
 export interface Options {
   locale?: Locale

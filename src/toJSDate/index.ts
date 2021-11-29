@@ -1,4 +1,4 @@
-import isDate from "./isDate"
+import isDate from "../isDate"
 
 export default function toJSDate(date: string): Date {
   if (!isDate(date)) {
