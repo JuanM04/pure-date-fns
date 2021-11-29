@@ -36,4 +36,7 @@ yarn build
 
 # Publish Yalc
 ./scripts/yalc.sh
+
+# Build and publish NPM
+./scripts/publish.sh
 ```
