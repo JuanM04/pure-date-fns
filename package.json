@@ -1,6 +1,15 @@
 {
   "name": "pure-date-fns",
+  "description": "A wrapper of date-fns to work with dates without time (`yyyy-MM-dd`).",
   "version": "0.1.0",
+  "author": {
+    "name": "JuanM04",
+    "email": "me@juanm04.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuanM04/pure-date-fns.git"
+  },
   "packageManager": "yarn@3.1.1",
   "volta": {
     "node": "16.13.0",

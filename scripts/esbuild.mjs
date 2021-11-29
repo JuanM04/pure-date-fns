@@ -110,7 +110,10 @@ async function main() {
 
   await writeJSON(pathJoin(distDir, "package.json"), {
     name: packageData.name,
+    description: packageData.description,
     version: packageData.version,
+    author: packageData.author,
+    repository: packageData.repository,
     main: "index.js",
     module: "_esm/index.js",
     typings: "index.d.ts",
@@ -120,6 +123,9 @@ async function main() {
   })
 
   console.info("Created package.json")
+
+  await fs.copyFile("README.md", pathJoin(distDir, "README.md"))
+
   console.info("Finished bundling!")
 }
 
