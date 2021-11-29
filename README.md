@@ -22,3 +22,18 @@ The same described by the [date-fns documentation](https://date-fns.org/docs/Get
 Also, all the functions related to time (like `addHours`, `startOfDay`, etc) were removed.
 
 Lastly, there are two extra utilities to help you convert between JavaScript dates and string dates: `fromJSDate` and `toJSDate`
+
+## Contributing
+
+Useful commands:
+
+```bash
+# Install the dependencies
+yarn install
+
+# Build the package
+yarn build
+
+# Publish Yalc
+./scripts/yalc.sh
+```
