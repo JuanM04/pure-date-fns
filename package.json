@@ -1,7 +1,7 @@
 {
   "name": "pure-date-fns",
   "description": "A wrapper of date-fns to work with dates without time (`yyyy-MM-dd`).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "JuanM04",
     "email": "me@juanm04.com"
