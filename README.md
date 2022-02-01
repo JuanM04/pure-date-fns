@@ -2,7 +2,7 @@
 
 A wrapper of [date-fns](https://www.npmjs.com/package/date-fns) to work with dates without time (`yyyy-MM-dd`).
 
-> `date-fns` version: 2.26.0
+> `date-fns` version: 2.28.0
 
 ## Installation
 
